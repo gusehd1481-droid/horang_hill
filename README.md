@@ -7,3 +7,5 @@
 * header - gnb - lnb HTML 제작완료
 * **gnb, lmb(depth2~3) 모두 ul-li-a통일해서 구성하기**
 * 시멘틱태그 `<nav>` 사용하기
+### 26/02/20 update
+* 검색 form css 추가
