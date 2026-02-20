@@ -1,0 +1,57 @@
+/* 공통 디자인 common.css */
+/* header , footer */
+body {}
+#wrap {}
+#wrap header {
+    background-color:rgba(0,0,0,0.9);
+    height:70px; padding:0 80px;
+    min-width:1220px;
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content:space-between;
+    align-items:center;
+    /* 스크롤 이동 시 고정 */
+    position:fixed; left:0; top:0; z-index:999; width:100%;
+}
+#wrap header h1 {}
+#wrap header h1 a {}
+#wrap header h1 a img {}
+#wrap header nav {}
+#wrap header nav #gnb {
+    display:flex; /* li 정렬 */
+    flex-flow:row nowrap; gap:20px;
+}
+#wrap header nav #gnb a:hover {color:yellow !important;} /* 공통 a */
+#wrap header nav #gnb > li {position:relative} /* 첫번째 서브 기준 */
+#wrap header nav #gnb > li:hover .gnb_depth_2 {display:block;} 
+#wrap header nav #gnb > li > a {
+    color:#fff;
+    line-height:70px; display:block;
+} /* line 20 */
+#wrap header nav #gnb > li > .gnb_depth_2 {
+    background-color:#898989;
+    position:absolute;
+    width:160px;
+    left:50%; transform:translateX(-50%); /* absolute 부모의 x축의 정중앙 */
+    display:none;
+}
+#wrap header nav #gnb > li > .gnb_depth_2 li:hover .gnb_depth_3 {display:block;}
+#wrap header nav #gnb > li > .gnb_depth_2 > li {}
+#wrap header nav #gnb > li > .gnb_depth_2 > li > a {
+    color:#fff;
+    display:block; line-height:46px;
+    text-align:center;
+}
+#wrap header nav #gnb > li > .gnb_depth_2 > li > .gnb_depth_3 {
+    background-color:#aaa;
+    text-align:center;
+    display:none;
+}
+#wrap header nav #gnb > li > .gnb_depth_2 > li > .gnb_depth_3 li {}
+#wrap header nav #gnb > li > .gnb_depth_2 > li > .gnb_depth_3 li a {
+    color:#fff;
+    line-height:46px;
+}
+/* =============================footer======================================= */
+#wrap footer {}
+#wrap footer p {}

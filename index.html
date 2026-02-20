@@ -8,19 +8,23 @@
     <title>호랑가시나무 게스트하우스</title>
     <link rel="shortcut icon" href="./horang_images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Orbit&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/common.css">
     <link rel="stylesheet" href="./style/index.css">
 </head>
 <body>
     <div id="wrap">
         <header>
-            <h1><a href="#"><img src="#" alt="호랑가시나무게스트하우스"></a></h1>
+            <h1><a href="./index.html"><img src="./images/logo.png" alt="호랑가시나무게스트하우스"></a></h1>
             <nav>
                 <ul id="gnb">
                     <li><a href="#">호랑가시나무언덕 소개</a>
-                        <ul class="lnb_depth_2">
+                        <ul class="gnb_depth_2">
                             <li><a href="#">숙소 소개/시설 안내</a>
-                                <ul class="lnb_depth_3">
+                                <ul class="gnb_depth_3">
                                     <li><a href="#">라운지</a></li>
                                     <li><a href="#">주방</a></li>
                                     <li><a href="#">옥상테라스</a></li>
@@ -29,29 +33,29 @@
                         </ul><!-- e:depth2 소개 -->
                     </li>
                     <li><a href="#">객실 소개</a>
-                        <ul class="lnb_depth_2">
+                        <ul class="gnb_depth_2">
                             <li><a href="#">Standard</a>
-                                <ul class="lnb_depth_3">
+                                <ul class="gnb_depth_3">
                                     <li><a href="#">상세 정보 및 비치품 목록</a></li>
                                 </ul>
                             </li>
                             <li><a href="#">Deluxe</a>
-                                <ul class="lnb_depth_3">
+                                <ul class="gnb_depth_3">
                                     <li><a href="#">상세 정보 및 비치품 목록</a></li>
                                 </ul>
                             </li>
                             <li><a href="#">Dormitory</a>
-                                <ul class="lnb_depth_3">
+                                <ul class="gnb_depth_3">
                                     <li><a href="#">상세 정보 및 비치품 목록</a></li>
                                 </ul>
                             </li>
                         </ul>
                     </li>
                     <li><a href="#">예약 안내</a>
-                        <ul class="lnb_depth_2">
+                        <ul class="gnb_depth_2">
                             <li><a href="#">실시간 예약</a></li>
                             <li><a href="#">예약 확인/취소</a>
-                                <ul class="lnb_depth_3">
+                                <ul class="gnb_depth_3">
                                     <li><a href="#">예약 조회</a></li>
                                     <li><a href="#">취소 신청</a></li>
                                 </ul>
@@ -60,9 +64,9 @@
                         </ul>
                     </li>
                     <li><a href="#">오시는 길</a>
-                        <ul class="lnb_depth_2">
+                        <ul class="gnb_depth_2">
                             <li><a href="#">오시는 길</a>
-                                <ul class="lnb_depth_3">
+                                <ul class="gnb_depth_3">
                                     <li><a href="#">도보/대중 교통 경보</a></li>
                                 </ul>
                             </li>
@@ -70,17 +74,17 @@
                         </ul>
                     </li>
                     <li><a href="#">고객 센터</a>
-                        <ul class="lnb_depth_2">
+                        <ul class="gnb_depth_2">
                             <li><a href="#">공지사항</a></li>
                             <li><a href="#">이벤트</a>
-                                <ul class="lnb_depth_3">
+                                <ul class="gnb_depth_3">
                                     <li><a href="#">진행 중 이벤트</a></li>
                                     <li><a href="#">종료 이벤트</a></li>
                                 </ul>
                             </li>
                             <li><a href="#">이용 후기</a></li>
                             <li><a href="#">Q&A</a>
-                                <ul class="lnb_depth_3">
+                                <ul class="gnb_depth_3">
                                     <li><a href="#">자주 묻는 질문</a></li>
                                     <li><a href="#">1대1 문의</a></li>
                                 </ul>
@@ -99,64 +103,96 @@
                 </div>
                 <!-- action 객실, 날짜, 인원 정보를 저장할 서버위치 -->
                 <!-- method 객실, 날짜, 인원 정보에 대한 보안 여부(post 보안함) -->
-                <form action="#" method="get">
+                <form action="#" method="get" id="reservation_form">
                     <div class="room">
                         <h2>객실</h2>
-                        <p>
-                            <select name="room_tyte" id="room_type"><!-- name(그룹명)  id(css,js) -->
-                                <option value="type1">포사이드 방(2/3인)</option><!-- value(서버전송값) -->
+                        <div class="room_type">
+                            <a href="#">
+                                <span class="name">포사이드방(2/3인)</span>
+                                <img src="./images/arrow_drop.png">
+                            </a>
+                            <div class="room_open">
+                                <a href="#"><span class="name">서로득방(3/4인)</span></a>
+                                <a href="#"><span class="name">서서평방VIP(1/2인)</span></a>
+                            </div>
+                        </div>
+                        <!-- <p>
+                            <select name="room_tyte" id="room_type">
+                                <option value="type1">포사이드 방(2/3인)</option>
                                 <option value="type2">우월순 방(3/4인)</option>
                                 <option value="type3">배유지 방(1/2인)</option>
                             </select>
-                        </p>
+                        </p> -->
                     </div>
                     <div class="check_in_out">
                         <div class="in">
                             <h2>체크인</h2>
-                            <p>
+                            <div class="chk_in">
+                            <a href="#">
+                                <span class="date">2026-02-20</span>
+                                <img src="./images/arrow_drop.png">
+                            </a>
+                            </div>
+                        </div>
+                        <!-- <p>
                                 <input type="date" 
                                 value="2026-01-28"
                                 min="2026-01-28"
                                 max="2026-02-10"
                                 name="in_date" id="in_date"
                                 >
-                            </p>
-                        </div>
+                            </p> -->
                         <div class="day">
-                            <img src="#" alt="">
-                            <em>2박</em>
+                            <img src="./images/moon.png" alt="">
+                            <em>10박</em>
                         </div>
                         <div class="out">
                             <h2>체크아웃</h2>
-                            <input type="date"
+                            <div class="chk_out">
+                            <a href="#">
+                                <span class="date">2026-02-30</span>
+                                <img src="./images/arrow_drop.png">
+                            </a>
+                            </div>
+                            <!--  <input type="date"
                             value="2026-01-29"
                             min="2026-01-29"
                             max="2026-02-15"
                             name="out_date" id="out_date"
-                            >
+                            > -->
                         </div>
                     </div>
                     <div class="person">
                         <h2>인원</h2>
                         <ul class="number">
                             <li>
-                                <label for="adult">성인</label>
-                                <input type="number" id="adult" name="adult" value="1" min="0">
+                                <button type="button" id="adult_add" class="number_btn"><img src="./images/add.png"></button>
+                                <span>
+                                    <label for="adult">성인</label>
+                                    <input type="number" id="adult" name="adult" value="1" min="0">
+                                </span>
+                                <button type="button" id="adult_remove" class="number_btn"><img src="./images/remove.png"></button>
                             </li>
                             <li>
-                                <label for="kid">어린이</label>
-                                <input type="number" id="kid" name="kid" value="1" min="0">
+                                <button type="button" id="kid_add" class="number_btn"><img src="./images/add.png"></button>
+                                <span>
+                                    <label for="kid">어린이</label>
+                                    <input type="number" id="kid" name="kid" value="1" min="0">
+                                </span>
+                                <button type="button" id="kid_remove" class="number_btn"><img src="./images/remove.png"></button>
                             </li>
                         </ul>
                     </div>
                     <!-- 요소를 클릭 시 특정페이지로 바로 이동하면 <a> -->
                     <!-- 요소를 클릭 시 조건에 따라 분기가 갈린다면 <button> -->
                     <!-- 버튼 종류 : submit(서버 전송), button(전송 포함 범용) -->
-                    <p><button type="submit" id="search_btn"></button></p>
+                    <p><button type="submit" id="search_btn">검색</button></p>
                 </form>
             </div>
         </main>
-        <footer></footer>
+        <footer>
+            <p>2026 &copy; copyright 호랑가시나무게스트하우스</p>
+        </footer>
     </div>
 </body>
 </html>
