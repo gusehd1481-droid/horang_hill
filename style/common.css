@@ -50,7 +50,7 @@ body {}
 #wrap header nav #gnb > li > .gnb_depth_2 > li > .gnb_depth_3 li {}
 #wrap header nav #gnb > li > .gnb_depth_2 > li > .gnb_depth_3 li a {
     color:#fff;
-    line-height:46px;
+    line-height:46px; font-size:0.94rem;
 }
 /* =============================footer======================================= */
 #wrap footer {}
