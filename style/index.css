@@ -176,74 +176,62 @@
 #wrap main #hero_bnr #reservation_form > p #search_btn:hover {
     background-color:#383487;
 }
-/* ===============================================================소개 */
+/* ===============================================================양림동 호랑가시나무소개 */
 #wrap main #intro_wrap {
     background-color:#f5f5f5;
 }
 #wrap main #intro_wrap .intro {
-    width:1220px;
-    margin:0 auto;
     display:flex;
     flex-flow:column nowrap;
     justify-content:space-between;
     align-items:flex-start;
-    gap:30px; padding:70px 0;
+    gap:30px;
 }
-#wrap main #intro_wrap .intro h1 {
-    font-size:1.5rem;
-    font-weight:500;
-}
-#wrap main #intro_wrap .intro p {
-    font-size:0.94rem;
-    font-weight:400;
-    line-height:1.7rem;
-    color:#555555;
-}
-#wrap main #intro_wrap .intro p img {}
+#wrap main #intro_wrap .intro h1 {}
+#wrap main #intro_wrap .intro h1+p {}
+#wrap main #intro_wrap .intro p:last-child {}
+#wrap main #intro_wrap .intro p:last-child img {width:100%;} /* 반응형웹에서 부모크기를 따라가도록 설정 (권장) */
 #wrap main #attraction_wrap {
     background-color:#fff;
 }
+/* ==========================================================================관광지 소개 */
+#wrap main #attraction_wrap .attraction > *{margin-bottom:30px;}
 #wrap main #attraction_wrap .attraction {
-    width:1220px;
-    margin:0 auto;
     display:flex;
     flex-flow:column nowrap;
-    gap:30px;
-    padding:70px 0;
+    justify-content:space-between;
 }
-#wrap main #attraction_wrap .attraction h1 {
-    font-size:1.5rem;
-    font-weight:500;
-}
-#wrap main #attraction_wrap .attraction > p {
-    font-size:0.94rem;
-    font-weight:400;
-    color:#555555;
-}
+#wrap main #attraction_wrap .attraction h1 {}
+#wrap main #attraction_wrap .attraction p {}
 #wrap main #attraction_wrap .attraction .list {
     display:flex;
     flex-flow:row nowrap;
     justify-content:space-between;
 }
 #wrap main #attraction_wrap .attraction .list li {
-    width:calc((100% - (20px * 3)) / 4); height:100%;
-    background-color: aqua;
-    overflow:hidden; 
+    width:calc(100 - (20px * 3) / 4);
+    overflow:hidden;
 }
 #wrap main #attraction_wrap .attraction .list li a {
-    overflow:hidden; display: block;
-}
-#wrap main #attraction_wrap .attraction .list li a:hover img {
-    width:110%; height:110%;
+    display:block;
+    height:250px;
+    overflow:hidden;
+    margin-bottom:10px;
 }
 #wrap main #attraction_wrap .attraction .list li a img {
-    margin-bottom:10px; 
+    width:100%;
 }
-#wrap main .attraction .list li a p {
+#wrap main #attraction_wrap .attraction .list li a:hover img {
+    width:120%;
+}
+#wrap main .attraction .list li h2 {
     font-size:1.13rem;
     font-weight:500;
 }
-#wrap main .attraction > a {
+#wrap main .attraction .more {
     margin:0 auto;
-    text-decoration:underline;
+    border-bottom:1px solid #000;
+    padding-top:50px;
 }
+/* ========================================================객실 및 예약안내 */
+/* ========================================================게스트 하우스 찾아오시는길 */

@@ -23,6 +23,7 @@ body {}
 }
 #wrap header nav #gnb a:hover {color:yellow !important;} /* 공통 a */
 #wrap header nav #gnb > li {position:relative} /* 첫번째 서브 기준 */
+#wrap header nav #gnb > li:first-child a {color:#43CE48;}
 #wrap header nav #gnb > li:hover .gnb_depth_2 {display:block;} 
 #wrap header nav #gnb > li > a {
     color:#fff;
@@ -55,3 +56,20 @@ body {}
 /* =============================footer======================================= */
 #wrap footer {}
 #wrap footer p {}
+/* =====================================================================main w1220 + p70 */
+#wrap main .container_layout,
+#wrap footer .container_layout {
+    width:1220px; margin:0 auto; padding:70px 0;
+}
+#wrap main #intro_wrap .intro h1,
+#wrap main #attraction_wrap .attraction h1 {
+    font-size:1.5rem;
+    font-weight:500;
+}
+#wrap main #intro_wrap .intro h1+p,
+#wrap main #attraction_wrap .attraction p {
+    font-size:0.94rem;
+    font-weight:400;
+    color:#555555;
+        line-height:1.7rem;
+}
