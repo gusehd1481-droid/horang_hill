@@ -45,13 +45,13 @@
 #wrap main #hero_bnr #reservation_form h2+div,
 #wrap main #hero_bnr #reservation_form ul li {}
 /* ----------------------------------------------객실 선택 */
-#wrap main #hero_bnr #reservation_form .room {}
-#wrap main #hero_bnr #reservation_form .room h2 {}
-#wrap main #hero_bnr #reservation_form .room .room_type {
+#wrap main #hero_bnr #reservation_form .rooms {}
+#wrap main #hero_bnr #reservation_form .rooms h2 {}
+#wrap main #hero_bnr #reservation_form .rooms .room_type {
     position:relative; /* room_open의 기준  */
 }
-#wrap main #hero_bnr #reservation_form .room .room_type > a,
-#wrap main #hero_bnr #reservation_form .room .room_type > .room_open a {
+#wrap main #hero_bnr #reservation_form .rooms .room_type > a,
+#wrap main #hero_bnr #reservation_form .rooms .room_type > .room_open a {
     /* 포사이드방 */
     display:flex; /* flex설정 시 형제끼리 크기 맞추는 자동설정 때문에 이미지 비율이 망가져 보일 수 있음 (메인, 교차축 설정 적용하면 해결됨) */
     flex-flow:row nowrap;
@@ -62,20 +62,20 @@
     width:173px; height:64px; 
     padding:0 12px;
 }
-#wrap main #hero_bnr #reservation_form .room .room_type:hover .room_open {
+#wrap main #hero_bnr #reservation_form .rooms .room_type:hover .room_open {
     display:block;
 }
-#wrap main #hero_bnr #reservation_form .room .room_type .name {font-size:0.88rem;}
-#wrap main #hero_bnr #reservation_form .room .room_type img {
+#wrap main #hero_bnr #reservation_form .rooms .room_type .name {font-size:0.88rem;}
+#wrap main #hero_bnr #reservation_form .rooms .room_type img {
     /* width:24px;   flex로 인해 보정이 되기 때문에 크기를 따로 쓸 필요없었음. */
 }
-#wrap main #hero_bnr #reservation_form .room .room_type .room_open {
+#wrap main #hero_bnr #reservation_form .rooms .room_type .room_open {
     position:absolute; left:0; top:64px;
     /* absolute 설정 시 기존 태그 크기가 inline-block 처럼 바뀜 */
     display:none;
 }
-#wrap main #hero_bnr #reservation_form .room .room_type .room_open a {}
-#wrap main #hero_bnr #reservation_form .room .room_type .room_open a .name {}
+#wrap main #hero_bnr #reservation_form .rooms .room_type .room_open a {}
+#wrap main #hero_bnr #reservation_form .rooms .room_type .room_open a .name {}
 #wrap main #hero_bnr #reservation_form .check_in_out {
     display:flex;
     flex-flow:row nowrap;
@@ -248,24 +248,24 @@
     align-items:center;
     width:1220px; gap:20px;
 }
+#wrap main #room_reservation .room_info .room_list .room img {width:220px; height:250px;}
 #wrap main #room_reservation .room_info .room_list .room1 {}
 #wrap main #room_reservation .room_info .room_list .room2 {}
 #wrap main #room_reservation .room_info .room_list .room3 {}
 #wrap main #room_reservation .room_info .room_list .room4 {}
 #wrap main #room_reservation .room_info .room_list .room a {}
-#wrap main #room_reservation .room_info .room_list .room img {width:100%;}
+/* #wrap main #room_reservation .room_info .room_list .room img {width:100%;} */
 #wrap main #room_reservation .room_info .room_list .room h2 {font-size:1.13rem; font-weight:500;}
-#wrap main #room_reservation .room_info .room_list .room p {}
 #wrap main #room_reservation .room_info .room_list .room p {display:none;}
 #wrap main #room_reservation .room_info .reservation {
     margin:0 auto;
     border-bottom:1px solid #000;
     padding-top:50px;
 }
-#wrap main #room_reservation .room_info .room_list .active {display:block;/*  width:550px; height:350px; */}
+#wrap main #room_reservation .room_info .room_list .active { width:550px;}
 #wrap main #room_reservation .room_info .room_list .active p {display:block;}
 #wrap main #room_reservation .room_info .room_list .active img {width:550px; height:350px;}
-#wrap main #room_reservation .room_info .room_list .room {}
+#wrap main #room_reservation .room_info .room_list .room {transition:0.3s;}
 /* ========================================================게스트 하우스 찾아오시는길 */
 #wrap main #location_wrap {}
 #wrap main #location_wrap .location {
