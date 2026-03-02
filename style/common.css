@@ -54,19 +54,28 @@ body {}
     line-height:46px; font-size:0.94rem;
 }
 /* =============================footer======================================= */
-#wrap footer {}
-#wrap footer p {}
+#wrap footer {
+    background-color:#000;
+}
+#wrap footer p {
+    width:1220px; margin:0 auto;
+    color:#fff; text-align:left; padding:70px 0;
+    line-height:2.0rem;
+    font-size:0.81rem;
+}
 /* =====================================================================main w1220 + p70 */
 #wrap main .container_layout,
 #wrap footer .container_layout {
     width:1220px; margin:0 auto; padding:70px 0;
 }
 #wrap main #intro_wrap .intro h1,
+#wrap main #room_reservation .room_info h1,
 #wrap main #attraction_wrap .attraction h1 {
     font-size:1.5rem;
     font-weight:500;
 }
 #wrap main #intro_wrap .intro h1+p,
+#wrap main #room_reservation .room_info p,
 #wrap main #attraction_wrap .attraction p {
     font-size:0.94rem;
     font-weight:400;

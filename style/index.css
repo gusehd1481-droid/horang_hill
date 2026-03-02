@@ -43,9 +43,7 @@
     margin-bottom:10px;
 }
 #wrap main #hero_bnr #reservation_form h2+div,
-#wrap main #hero_bnr #reservation_form ul li {
-    background-color:yellowgreen;
-}
+#wrap main #hero_bnr #reservation_form ul li {}
 /* ----------------------------------------------객실 선택 */
 #wrap main #hero_bnr #reservation_form .room {}
 #wrap main #hero_bnr #reservation_form .room h2 {}
@@ -144,7 +142,7 @@
     align-items:center;
 }
 #wrap main #hero_bnr #reservation_form .person .number li .number_btn {
-    background-color: aqua; width:24px; height:24px;
+    width:24px; height:24px;
 }
 #wrap main #hero_bnr #reservation_form .person .number li .number_btn img {}
 #wrap main #hero_bnr #reservation_form .person .number li span {
@@ -153,7 +151,6 @@
 #wrap main #hero_bnr #reservation_form .person .number li span input {
     width:30px;
     text-align:center;
-    background-color: antiquewhite;
 }
 /* --------------------------------------인원 */
 #wrap main #hero_bnr #reservation_form .person .number li #adult_add {}
@@ -234,4 +231,71 @@
     padding-top:50px;
 }
 /* ========================================================객실 및 예약안내 */
+#wrap main #room_reservation {background-color:#f5f5f5;}
+#wrap main #room_reservation .room_info {
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content:center;
+    align-content:space-between;
+    width:1220px; margin:0 auto; padding:70px 0;
+    gap:30px;
+}
+#wrap main #room_reservation .room_info h1 {}
+#wrap main #room_reservation .room_info p {}
+#wrap main #room_reservation .room_info .room_list {
+    display:flex;
+    flex-flow:row nowrap;
+    align-items:center;
+    width:1220px; gap:20px;
+}
+#wrap main #room_reservation .room_info .room_list .room1 {}
+#wrap main #room_reservation .room_info .room_list .room2 {}
+#wrap main #room_reservation .room_info .room_list .room3 {}
+#wrap main #room_reservation .room_info .room_list .room4 {}
+#wrap main #room_reservation .room_info .room_list .room a {}
+#wrap main #room_reservation .room_info .room_list .room img {width:100%;}
+#wrap main #room_reservation .room_info .room_list .room h2 {font-size:1.13rem; font-weight:500;}
+#wrap main #room_reservation .room_info .room_list .room p {}
+#wrap main #room_reservation .room_info .room_list .room p {display:none;}
+#wrap main #room_reservation .room_info .reservation {
+    margin:0 auto;
+    border-bottom:1px solid #000;
+    padding-top:50px;
+}
+#wrap main #room_reservation .room_info .room_list .active {display:block;/*  width:550px; height:350px; */}
+#wrap main #room_reservation .room_info .room_list .active p {display:block;}
+#wrap main #room_reservation .room_info .room_list .active img {width:550px; height:350px;}
+#wrap main #room_reservation .room_info .room_list .room {}
 /* ========================================================게스트 하우스 찾아오시는길 */
+#wrap main #location_wrap {}
+#wrap main #location_wrap .location {
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content:space-between;
+    align-items:flex-start;
+    width:1220px; margin:0 auto; padding:70px 0;
+    gap:30px;
+}
+#wrap main #location_wrap .location .title {
+    display:flex;
+    width:100%;
+    flex-flow:row nowrap;
+    justify-content:space-between;
+}
+#wrap main #location_wrap .location .title h1 {font-size:1.5rem;
+    font-weight:500;}
+#wrap main #location_wrap .location .title p {}
+#wrap main #location_wrap .location a {}
+#wrap main #location_wrap .location a img {}
+#wrap main #location_wrap .location dl {}
+#wrap main #location_wrap .location dt { 
+    font-size:1.5rem;
+    font-weight:500;
+}
+#wrap main #location_wrap .location dd {
+    font-size:0.94rem;
+    font-weight:400;
+    color:#555555;
+    line-height:1.7rem;
+}
+#wrap main #location_wrap .location dd:nth-child(3) {margin:30px 0;}
