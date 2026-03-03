@@ -25,9 +25,9 @@ body {}
 #wrap header nav #gnb > li {position:relative} /* 첫번째 서브 기준 */
 #wrap header nav #gnb > li:first-child a {color:#43CE48;}
 #wrap header nav #gnb > li:hover .gnb_depth_2 {display:block;} 
-#wrap header nav #gnb > li > a {
+#wrap header nav #gnb li a {
     color:#fff;
-    line-height:70px; display:block;
+    line-height:70px; display:block; 
 } /* line 20 */
 #wrap header nav #gnb > li > .gnb_depth_2 {
     background-color:#898989;
@@ -53,15 +53,16 @@ body {}
     color:#fff;
     line-height:46px; font-size:0.94rem;
 }
+#wrap header nav #gnb > li > .gnb_depth_2 > li > .gnb_depth_3 li:hover a {}
 /* =============================footer======================================= */
 #wrap footer {
     background-color:#000;
 }
-#wrap footer p {
+#wrap footer address {
     width:1220px; margin:0 auto;
-    color:#fff; text-align:left; padding:70px 0;
-    line-height:2.0rem;
-    font-size:0.81rem;
+    padding:70px 0;
+    color:#fff; font-size:0.81rem;
+    line-height:2.0;
 }
 /* =====================================================================main w1220 + p70 */
 #wrap main .container_layout,

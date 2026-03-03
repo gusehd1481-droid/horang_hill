@@ -217,6 +217,7 @@
 }
 #wrap main #attraction_wrap .attraction .list li a img {
     width:100%;
+    transition:width 0.3s linear;
 }
 #wrap main #attraction_wrap .attraction .list li a:hover img {
     width:120%;
